@@ -145,10 +145,57 @@ function App() {
 
     if (activeTab === "Profile") {
       return (
-        <div className="screenPanel">
-          <h1>👤 Profile</h1>
-          <p>Your Zynex profile, privacy settings and circles.</p>
-          <button>Edit Profile</button>
+        <div className="profileScreen">
+          <div className="profileCard">
+            <div className="profileAvatar">Z</div>
+
+            <h1>Kashish</h1>
+            <p>@zynex_user • Private Creator</p>
+
+            <div className="profileStats">
+              <div>
+                <h2>128</h2>
+                <span>Friends</span>
+              </div>
+
+              <div>
+                <h2>42</h2>
+                <span>Stories</span>
+              </div>
+
+              <div>
+                <h2>9</h2>
+                <span>Rooms</span>
+              </div>
+            </div>
+
+            <div className="profileActions">
+              <button>Edit Profile</button>
+              <button className="ghostBtn">Ghost Mode</button>
+            </div>
+          </div>
+
+          <div className="settingsGrid">
+            <div className="settingBox">
+              <h3>🔒 Privacy</h3>
+              <p>Control who can see your activity.</p>
+            </div>
+
+            <div className="settingBox">
+              <h3>👻 Ghost Status</h3>
+              <p>Hide online, typing and seen status.</p>
+            </div>
+
+            <div className="settingBox">
+              <h3>🎨 Theme</h3>
+              <p>Black + Cyan premium app theme.</p>
+            </div>
+
+            <div className="settingBox">
+              <h3>⚡ Account</h3>
+              <p>Manage login, security and profile.</p>
+            </div>
+          </div>
         </div>
       );
     }

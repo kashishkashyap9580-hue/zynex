@@ -905,3 +905,152 @@ body,
   transform: scale(1.04);
   box-shadow: 0 0 50px rgba(0, 255, 255, 0.5);
 }
+
+/* PROFILE SCREEN */
+
+.profileScreen {
+  width: 100%;
+  max-width: 1100px;
+  margin: 15px auto 0;
+  padding-bottom: 150px;
+  color: white;
+}
+
+.profileCard {
+  width: 100%;
+  padding: 35px;
+  border-radius: 38px;
+  text-align: center;
+
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(0,255,255,0.22);
+  backdrop-filter: blur(35px);
+
+  box-shadow:
+    0 0 45px rgba(0,255,255,0.12),
+    inset 0 0 25px rgba(255,255,255,0.04);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.profileCard::before {
+  content: "";
+  position: absolute;
+  top: -140px;
+  left: -120px;
+  width: 260px;
+  height: 620px;
+  background: linear-gradient(rgba(255,255,255,0.14), transparent);
+  transform: rotate(35deg);
+}
+
+.profileAvatar {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  margin: 0 auto 18px;
+
+  display: grid;
+  place-items: center;
+
+  background: #00f7ff;
+  color: black;
+
+  font-size: 48px;
+  font-weight: bold;
+
+  box-shadow: 0 0 45px rgba(0,255,255,0.55);
+}
+
+.profileCard h1 {
+  font-size: 46px;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+
+.profileCard p {
+  color: #94a3b8;
+  font-size: 18px;
+  margin-bottom: 28px;
+}
+
+.profileStats {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 28px;
+}
+
+.profileStats div {
+  width: 145px;
+  padding: 18px;
+  border-radius: 24px;
+
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(0,255,255,0.18);
+}
+
+.profileStats h2 {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.profileStats span {
+  color: #94a3b8;
+}
+
+.profileActions {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.profileActions button {
+  padding: 15px 28px;
+  border: none;
+  border-radius: 22px;
+
+  background: linear-gradient(90deg, #00f7ff, #00d4ff);
+  color: black;
+
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+
+  box-shadow: 0 0 30px rgba(0,255,255,0.28);
+}
+
+.profileActions .ghostBtn {
+  background: rgba(255,255,255,0.08);
+  color: white;
+  border: 1px solid rgba(0,255,255,0.25);
+}
+
+.settingsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.settingBox {
+  padding: 28px;
+  border-radius: 30px;
+
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(0,255,255,0.18);
+  backdrop-filter: blur(30px);
+
+  box-shadow: 0 0 30px rgba(0,255,255,0.08);
+}
+
+.settingBox h3 {
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.settingBox p {
+  color: #94a3b8;
+  font-size: 16px;
+}
