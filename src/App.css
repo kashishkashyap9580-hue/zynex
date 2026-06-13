@@ -1054,3 +1054,365 @@ body,
   color: #94a3b8;
   font-size: 16px;
 }
+
+/* SIGNUP + LOGIN EXTRA UI */
+
+.signupCard {
+  width: 500px;
+  padding: 38px 45px;
+}
+
+.signupCard input {
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.divider {
+  text-align: center;
+  color: #94a3b8;
+  margin: 18px 0;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.googleBtn,
+.phoneBtn {
+  margin-top: 12px;
+  background: rgba(255,255,255,0.08) !important;
+  color: white !important;
+  border: 1px solid rgba(0,255,255,0.25) !important;
+  font-size: 18px !important;
+  box-shadow: 0 0 22px rgba(0,255,255,0.12) !important;
+}
+
+.googleBtn::before {
+  content: "🔵 ";
+}
+
+.phoneBtn::before {
+  content: "📱 ";
+}
+
+.authSwitch {
+  margin-top: 22px;
+  margin-bottom: 0 !important;
+  color: #94a3b8;
+  text-align: center;
+  font-size: 16px !important;
+}
+
+.authSwitch span {
+  color: #00f7ff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.authSwitch span:hover {
+  text-shadow: 0 0 14px rgba(0,255,255,0.8);
+}
+
+/* LOGIN / SIGNUP SCREEN FIT FIX */
+
+.app {
+  overflow-y: auto;
+  align-items: flex-start;
+  padding-top: 35px;
+}
+
+.card {
+  margin: 20px auto 40px;
+  padding: 34px 42px;
+}
+
+.card h1 {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  margin-bottom: 24px;
+}
+
+.card input {
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.card button {
+  padding: 16px;
+  font-size: 22px;
+}
+
+.divider {
+  margin: 12px 0;
+}
+
+.googleBtn,
+.phoneBtn {
+  padding: 15px !important;
+  font-size: 17px !important;
+  margin-top: 10px;
+}
+
+.authSwitch {
+  display: block;
+  margin-top: 18px !important;
+  color: #94a3b8;
+  text-align: center;
+}
+.card::before,
+.profileCard::before,
+.homeCard::before,
+.box::before,
+.roomCard::before,
+.screenPanel::before {
+  pointer-events: none;
+}
+
+.card button,
+.signupCard button {
+  position: relative;
+  z-index: 20;
+  cursor: pointer;
+}
+.card::before,
+.signupCard::before,
+.profileCard::before,
+.homeCard::before,
+.box::before,
+.roomCard::before,
+.screenPanel::before {
+  pointer-events: none;
+}
+
+.card button,
+.signupCard button {
+  position: relative;
+  z-index: 9999;
+  pointer-events: auto;
+}
+/* FINAL HOME + DASHBOARD OVERLAP FIX */
+
+.dashboard {
+  width: 100%;
+  height: 100vh;
+  padding: 25px 45px 145px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.homeGrid {
+  padding-bottom: 150px;
+}
+
+.profileScreen,
+.chatScreen,
+.cameraScreen {
+  padding-bottom: 160px;
+}
+
+.bottomNav {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999999;
+}
+
+/* PREMIUM ROOMS PANEL SAFE DESIGN */
+
+.screenPanel {
+  width: 78%;
+  min-height: 420px;
+  margin: 30px auto 160px;
+  border-radius: 42px;
+  padding: 60px 45px;
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(0, 255, 255, 0.22);
+  backdrop-filter: blur(35px);
+
+  box-shadow:
+    0 0 45px rgba(0, 255, 255, 0.12),
+    inset 0 0 25px rgba(255, 255, 255, 0.04);
+
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.screenPanel::before {
+  content: "";
+  position: absolute;
+  top: -130px;
+  left: -100px;
+  width: 240px;
+  height: 600px;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.14),
+    transparent
+  );
+  transform: rotate(35deg);
+  pointer-events: none;
+}
+
+.screenPanel h1 {
+  font-size: 56px;
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+}
+
+.screenPanel p {
+  color: #94a3b8;
+  font-size: 21px;
+  margin-bottom: 38px;
+}
+
+.screenPanel button {
+  padding: 18px 42px;
+  border: none;
+  border-radius: 22px;
+
+  background: linear-gradient(90deg, #00f7ff, #00d4ff);
+  color: black;
+
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+
+  position: relative;
+  z-index: 5;
+
+  box-shadow: 0 0 35px rgba(0, 255, 255, 0.35);
+}
+
+.screenPanel button:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 50px rgba(0, 255, 255, 0.5);
+}
+/* MOBILE RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+  .app {
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+
+  .card,
+  .signupCard {
+    width: 92%;
+    padding: 28px 24px;
+    margin-top: 20px;
+  }
+
+  .card h1 {
+    font-size: 42px;
+    letter-spacing: 5px;
+  }
+
+  .dashboard {
+    padding: 18px 14px 130px;
+  }
+
+  .topBar {
+    height: 55px;
+    border-radius: 20px;
+  }
+
+  .welcome {
+    font-size: 32px;
+    margin-top: 15px;
+  }
+
+  .storiesRow {
+    gap: 12px;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 0 10px;
+  }
+
+  .storyCircle {
+    min-width: 60px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .homeGrid,
+  .settingsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .wideCard {
+    grid-column: span 1;
+  }
+
+  .chatScreen {
+    grid-template-columns: 1fr;
+    padding-bottom: 160px;
+  }
+
+  .chatList {
+    max-height: 260px;
+    overflow-y: auto;
+  }
+
+  .chatBox {
+    min-height: 480px;
+  }
+
+  .cameraScreen {
+    max-width: 100%;
+  }
+
+  .cameraTop,
+  .cameraFrame,
+  .moodChips {
+    width: 100%;
+  }
+
+  .cameraFrame {
+    height: 300px;
+  }
+
+  .cameraText h1 {
+    font-size: 32px;
+  }
+
+  .cameraActions {
+    gap: 14px;
+  }
+
+  .cameraActions button {
+    min-width: 90px;
+    padding: 10px 14px;
+  }
+
+  .captureBtn {
+    width: 62px;
+    height: 62px;
+  }
+
+  .profileStats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profileStats div {
+    width: 90%;
+  }
+
+  .bottomNav {
+    width: 92%;
+    padding: 12px 10px;
+    bottom: 12px;
+  }
+
+  .bottomNav div {
+    font-size: 20px;
+  }
+
+  .bottomNav span {
+    font-size: 11px;
+  }
+}

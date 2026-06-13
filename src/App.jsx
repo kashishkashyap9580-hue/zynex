@@ -3,7 +3,72 @@ import { useState } from "react";
 
 function App() {
   const [login, setLogin] = useState(false);
+  const [authMode, setAuthMode] = useState("login");
   const [activeTab, setActiveTab] = useState("Home");
+
+  const renderAuth = () => {
+    if (authMode === "signup") {
+      return (
+        <div className="card signupCard">
+          <h1>ZYNEX</h1>
+          <p>Create your private account</p>
+
+          <input type="text" placeholder="Full Name" />
+          <input type="text" placeholder="Username" />
+          <input type="email" placeholder="Email Address" />
+          <input type="tel" placeholder="Phone Number" />
+          <input type="password" placeholder="Password" />
+          <input type="password" placeholder="Confirm Password" />
+
+          <button
+  type="button"
+  onClick={() => {
+    <button
+  type="button"
+  onClick={() => {
+    setActiveTab("Home");
+    setLogin(true);
+  }}
+>
+  Create Account
+</button>
+    setActiveTab("Home");
+    setLogin(true);
+  }}
+>
+  Create Account
+</button>
+
+          <p className="authSwitch">
+            Already have an account?{" "}
+            <span onClick={() => setAuthMode("login")}>Login</span>
+          </p>
+        </div>
+      );
+    }
+
+    return (
+      <div className="card">
+        <h1>ZYNEX</h1>
+        <p>Login to your private world</p>
+
+        <input type="text" placeholder="Email or Username" />
+        <input type="password" placeholder="Password" />
+
+        <button onClick={() => setLogin(true)}>Login</button>
+
+        <div className="divider">OR</div>
+
+        <button className="googleBtn">Continue with Google</button>
+        <button className="phoneBtn">Continue with Phone</button>
+
+        <p className="authSwitch">
+          Don't have an account?{" "}
+          <span onClick={() => setAuthMode("signup")}>Sign Up</span>
+        </p>
+      </div>
+    );
+  };
 
   const renderScreen = () => {
     if (activeTab === "Home") {
@@ -209,17 +274,7 @@ function App() {
       <div className="glow glow2"></div>
 
       {!login ? (
-        <div className="card">
-          <h1>ZYNEX</h1>
-          <p>Login to your private world</p>
-
-          <input type="text" placeholder="Email or Username" />
-          <input type="password" placeholder="Password" />
-
-          <button onClick={() => setLogin(true)}>Login</button>
-
-          <p className="smallText">Don't have an account? Sign Up</p>
-        </div>
+        renderAuth()
       ) : (
         <div className="dashboard">
           <div className="topBar">
@@ -273,3 +328,4 @@ function App() {
 }
 
 export default App;
+
