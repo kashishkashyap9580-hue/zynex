@@ -274,8 +274,34 @@ function App() {
             </div>
 
             <div className="profileActions">
-              <button>Edit Profile</button>
-              <button>Edit Profile</button>
+              <button
+  type="button"
+  onClick={() => {
+    const newName = prompt(
+      "Enter your full name",
+      profileData.fullName || "Kashish"
+    );
+
+    if (!newName) return;
+
+    const newUsername = prompt(
+      "Enter your username",
+      profileData.username || "zynex_user"
+    );
+
+    if (!newUsername) return;
+
+    const updatedProfile = {
+      fullName: newName.trim(),
+      username: newUsername.trim(),
+    };
+
+    setProfileData(updatedProfile);
+    localStorage.setItem("zynexProfile", JSON.stringify(updatedProfile));
+  }}
+>
+  Edit Profile
+</button>
               <button className="ghostBtn">Ghost Mode</button>
             </div>
           </div>
