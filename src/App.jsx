@@ -5,6 +5,18 @@ function App() {
   const [login, setLogin] = useState(false);
   const [authMode, setAuthMode] = useState("login");
   const [activeTab, setActiveTab] = useState("Home");
+  const [profileData, setProfileData] = useState(() => {
+  const savedProfile = localStorage.getItem("zynexProfile");
+
+  if (savedProfile) {
+    return JSON.parse(savedProfile);
+  }
+
+  return {
+    fullName: "",
+    username: "",
+  };
+});
 
   const renderAuth = () => {
     if (authMode === "signup") {
@@ -13,25 +25,31 @@ function App() {
           <h1>ZYNEX</h1>
           <p>Create your private account</p>
 
-          <input type="text" placeholder="Full Name" />
-          <input type="text" placeholder="Username" />
+          <input
+  type="text"
+  placeholder="Full Name"
+  value={profileData.fullName}
+  onChange={(e) =>
+    setProfileData({ ...profileData, fullName: e.target.value })
+  }
+/>
+          <input
+  type="text"
+  placeholder="Username"
+  value={profileData.username}
+  onChange={(e) =>
+    setProfileData({ ...profileData, username: e.target.value })
+  }
+/>
           <input type="email" placeholder="Email Address" />
           <input type="tel" placeholder="Phone Number" />
           <input type="password" placeholder="Password" />
           <input type="password" placeholder="Confirm Password" />
 
-          <button
+         <button
   type="button"
   onClick={() => {
-    <button
-  type="button"
-  onClick={() => {
-    setActiveTab("Home");
-    setLogin(true);
-  }}
->
-  Create Account
-</button>
+    localStorage.setItem("zynexProfile", JSON.stringify(profileData));
     setActiveTab("Home");
     setLogin(true);
   }}
@@ -214,8 +232,8 @@ function App() {
           <div className="profileCard">
             <div className="profileAvatar">Z</div>
 
-            <h1>Kashish</h1>
-            <p>@zynex_user • Private Creator</p>
+            <h1>{profileData.fullName || "Kashish"}</h1>
+            <p>@{profileData.username || "zynex_user"} • Private Creator</p>
 
             <div className="profileStats">
               <div>
