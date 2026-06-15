@@ -6,6 +6,27 @@ function App() {
   const [authMode, setAuthMode] = useState("login");
   const [activeTab, setActiveTab] = useState("Home");
   const [profileData, setProfileData] = useState(() => {
+    const handleEditProfile = () => {
+  const newName = prompt(
+    "Enter your full name",
+    profileData.fullName || "Kashish"
+  );
+
+  const newUsername = prompt(
+    "Enter your username",
+    profileData.username || "zynex_user"
+  );
+
+  if (!newName || !newUsername) return;
+
+  const updatedProfile = {
+    fullName: newName.trim(),
+    username: newUsername.trim(),
+  };
+
+  setProfileData(updatedProfile);
+  localStorage.setItem("zynexProfile", JSON.stringify(updatedProfile));
+};
   const savedProfile = localStorage.getItem("zynexProfile");
 
   if (savedProfile) {
@@ -253,6 +274,7 @@ function App() {
             </div>
 
             <div className="profileActions">
+              <button>Edit Profile</button>
               <button>Edit Profile</button>
               <button className="ghostBtn">Ghost Mode</button>
             </div>
