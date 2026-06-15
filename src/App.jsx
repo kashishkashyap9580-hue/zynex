@@ -5,6 +5,7 @@ function App() {
   const [login, setLogin] = useState(false);
   const [authMode, setAuthMode] = useState("login");
   const [activeTab, setActiveTab] = useState("Home");
+  const [ghostMode, setGhostMode] = useState(false);
   const [profileData, setProfileData] = useState(() => {
     const handleEditProfile = () => {
   const newName = prompt(
@@ -302,7 +303,13 @@ function App() {
 >
   Edit Profile
 </button>
-              <button className="ghostBtn">Ghost Mode</button>
+              <button
+  className="ghostBtn"
+  type="button"
+  onClick={() => setGhostMode(!ghostMode)}
+>
+  {ghostMode ? "Ghost ON 👻" : "Ghost Mode"}
+</button>
             </div>
           </div>
 
