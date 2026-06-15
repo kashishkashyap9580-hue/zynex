@@ -256,7 +256,7 @@ function App() {
 
             <h1>{profileData.fullName || "Kashish"}</h1>
             <p>@{profileData.username || "zynex_user"} • Private Creator</p>
-            
+
             <p className={ghostMode ? "ghostStatus on" : "ghostStatus off"}>
   {ghostMode
     ? "👻 Ghost Mode ON — online, typing and seen hidden"
@@ -315,6 +315,17 @@ function App() {
   onClick={() => setGhostMode(!ghostMode)}
 >
   {ghostMode ? "Ghost ON 👻" : "Ghost Mode"}
+</button>
+<button
+  className="logoutBtn"
+  type="button"
+  onClick={() => {
+    setLogin(false);
+    setAuthMode("login");
+    setActiveTab("Home");
+  }}
+>
+  Logout
 </button>
             </div>
           </div>
