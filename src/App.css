@@ -1463,3 +1463,18 @@ body,
   border: 1px solid rgba(255, 0, 80, 0.35) !important;
   box-shadow: 0 0 28px rgba(255, 0, 80, 0.18) !important;
 }
+
+.ghostStatus {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ghostStatus.on {
+  color: #00f7ff;
+  text-shadow: 0 0 18px rgba(0, 255, 255, 0.7);
+}
+
+.ghostStatus.off {
+  color: #9aa8b8;
+}

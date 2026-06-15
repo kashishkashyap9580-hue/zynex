@@ -256,6 +256,12 @@ function App() {
 
             <h1>{profileData.fullName || "Kashish"}</h1>
             <p>@{profileData.username || "zynex_user"} • Private Creator</p>
+            
+            <p className={ghostMode ? "ghostStatus on" : "ghostStatus off"}>
+  {ghostMode
+    ? "👻 Ghost Mode ON — online, typing and seen hidden"
+    : "🟢 Ghost Mode OFF — activity visible"}
+</p>
 
             <div className="profileStats">
               <div>
@@ -321,7 +327,11 @@ function App() {
 
             <div className="settingBox">
               <h3>👻 Ghost Status</h3>
-              <p>Hide online, typing and seen status.</p>
+              <p>
+  {ghostMode
+    ? "Ghost Mode is ON. Online, typing and seen status hidden."
+    : "Ghost Mode is OFF. Your activity is visible."}
+</p>
             </div>
 
             <div className="settingBox">
