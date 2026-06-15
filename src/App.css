@@ -1443,3 +1443,23 @@ body,
   transform: scale(1.04);
   box-shadow: 0 0 40px rgba(255, 0, 80, 0.3) !important;
 }
+.logoutBtn {
+  background: rgba(255, 0, 80, 0.18) !important;
+  color: #ff8fab !important;
+  border: 1px solid rgba(255, 0, 80, 0.35) !important;
+  box-shadow: 0 0 28px rgba(255, 0, 80, 0.18) !important;
+}
+
+.profileActions {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.logoutBtn {
+  background: rgba(255, 0, 80, 0.18) !important;
+  color: #ff8fab !important;
+  border: 1px solid rgba(255, 0, 80, 0.35) !important;
+  box-shadow: 0 0 28px rgba(255, 0, 80, 0.18) !important;
+}
