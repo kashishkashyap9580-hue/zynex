@@ -99,8 +99,24 @@ function App() {
 
         <div className="divider">OR</div>
 
-        <button className="googleBtn">Continue with Google</button>
-        <button className="phoneBtn">Continue with Phone</button>
+        <button
+  className="googleBtn"
+  type="button"
+  onClick={() => {
+    alert("Google login backend will be connected soon.");
+  }}
+>
+   Continue with Google
+</button>
+        <button
+  className="phoneBtn"
+  type="button"
+  onClick={() => {
+    alert("Phone number login backend will be connected soon.");
+  }}
+>
+   Continue with Phone
+</button>
 
         <p className="authSwitch">
           Don't have an account?{" "}
