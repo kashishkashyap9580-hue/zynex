@@ -373,7 +373,7 @@ function App() {
 
             <div className="settingBox">
               <h3>⚡ Account</h3>
-              <p>Manage login, security and profile.</p>
+             <p>Account Status: Active ✅</p>
             </div>
           </div>
         </div>
