@@ -1478,3 +1478,18 @@ body,
 .ghostStatus.off {
   color: #9aa8b8;
 }
+.verifiedBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-left: 10px;
+  border-radius: 50%;
+  background: #00f7ff;
+  color: #00131a;
+  font-size: 16px;
+  font-weight: 900;
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.75);
+  vertical-align: middle;
+}

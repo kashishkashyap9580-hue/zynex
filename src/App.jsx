@@ -275,7 +275,9 @@ function App() {
           <div className="profileCard">
             <div className="profileAvatar">Z</div>
 
-            <h1>{profileData.fullName || "Kashish"}</h1>
+            <h1>
+  {profileData.fullName || "Kashish"} <span className="verifiedBadge">✓</span>
+</h1>
             <p>@{profileData.username || "zynex_user"} • Private Creator</p>
 
             <p className={ghostMode ? "ghostStatus on" : "ghostStatus off"}>
