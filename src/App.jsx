@@ -70,11 +70,16 @@ function App() {
 
          <button
   type="button"
-  onClick={() => {
-    localStorage.setItem("zynexProfile", JSON.stringify(profileData));
-    setActiveTab("Home");
-    setLogin(true);
-  }}
+ onClick={() => {
+  if (!profileData.fullName.trim() || !profileData.username.trim()) {
+    alert("Please enter full name and username.");
+    return;
+  }
+
+  localStorage.setItem("zynexProfile", JSON.stringify(profileData));
+  setActiveTab("Home");
+  setLogin(true);
+}}
 >
   Create Account
 </button>
