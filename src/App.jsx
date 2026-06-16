@@ -279,6 +279,10 @@ function App() {
   {profileData.fullName || "Kashish"} <span className="verifiedBadge">✓</span>
 </h1>
             <p>@{profileData.username || "zynex_user"} • Private Creator</p>
+            
+            <p className="profileBio">
+  Building private vibes on ZYNEX 🚀
+</p>
 
             <p className={ghostMode ? "ghostStatus on" : "ghostStatus off"}>
   {ghostMode

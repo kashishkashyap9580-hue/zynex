@@ -1493,3 +1493,11 @@ body,
   box-shadow: 0 0 18px rgba(0, 255, 255, 0.75);
   vertical-align: middle;
 }
+
+.profileBio {
+  margin-top: 10px;
+  color: #9aa8b8;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
