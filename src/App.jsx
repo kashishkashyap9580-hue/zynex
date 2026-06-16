@@ -280,9 +280,22 @@ function App() {
 </h1>
             <p>@{profileData.username || "zynex_user"} • Private Creator</p>
             
-            <p className="profileBio">
-  Building private vibes on ZYNEX 🚀
-</p>
+            <p className="profileBio">{profileBio}</p>
+
+<button
+  className="editBioBtn"
+  type="button"
+  onClick={() => {
+    const newBio = prompt("Enter your bio", profileBio);
+
+    if (!newBio) return;
+
+    setProfileBio(newBio.trim());
+    localStorage.setItem("zynexBio", newBio.trim());
+  }}
+>
+  Edit Bio
+</button>
 
             <p className={ghostMode ? "ghostStatus on" : "ghostStatus off"}>
   {ghostMode
